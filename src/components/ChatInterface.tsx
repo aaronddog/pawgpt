@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { PaperAirplaneIcon } from '@heroicons/react/24/outline';
 
 interface Message {
@@ -48,30 +48,43 @@ const generateDogResponse = (userMessage: string): string => {
     return "Woof! Health is paws-itively important! Regular vet checkups, proper nutrition, exercise, and dental care keep us happy and healthy. If you notice changes in appetite, energy, or behavior, it's always better to ask a vet. We can't tell you when something hurts, so you're our voice! Take care of us like we take care of you! 💗🏥";
   }
   
-  // Default responses with some personality
-  const randomResponse = dogResponses[Math.floor(Math.random() * dogResponses.length)];
+  // Default responses with some personality - use a deterministic selection to avoid hydration issues
+  const responseIndex = userMessage.length % dogResponses.length;
+  const randomResponse = dogResponses[responseIndex];
   const genericAdvice = "That's a paw-some question! While I love to help with all things dog-related, every pup is unique. For the best advice, especially about health or serious behavior issues, always consult with a professional veterinarian or certified dog trainer. They know best! 🐕‍🦺✨";
   
   return randomResponse + " " + genericAdvice;
 };
 
 export default function ChatInterface() {
+  const messageIdCounter = useRef(1);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
       text: "Woof woof! Hi there! I'm PawGPT, your friendly AI dog assistant! 🐕 I'm here to help with all things dog-related - training, behavior, health, nutrition, and more! What would you like to chat about today?",
       isAI: true,
-      timestamp: new Date()
+      timestamp: new Date(0) // Use epoch time to ensure consistent server/client rendering
     }
   ]);
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  // Set client flag after hydration to handle timestamp display
+  useEffect(() => {
+    setIsClient(true);
+    // Update initial message timestamp after hydration
+    setMessages(prev => prev.map(msg => 
+      msg.id === '1' ? { ...msg, timestamp: new Date() } : msg
+    ));
+  }, []);
 
   const handleSendMessage = async () => {
     if (!inputText.trim()) return;
 
+    messageIdCounter.current += 1;
     const userMessage: Message = {
-      id: Date.now().toString(),
+      id: messageIdCounter.current.toString(),
       text: inputText,
       isAI: false,
       timestamp: new Date()
@@ -83,8 +96,9 @@ export default function ChatInterface() {
 
     // Simulate AI thinking time
     setTimeout(() => {
+      messageIdCounter.current += 1;
       const aiResponse: Message = {
-        id: (Date.now() + 1).toString(),
+        id: messageIdCounter.current.toString(),
         text: generateDogResponse(inputText),
         isAI: true,
         timestamp: new Date()
@@ -136,7 +150,7 @@ export default function ChatInterface() {
                     {message.text}
                   </p>
                   <p className="text-xs opacity-75 mt-1">
-                    {message.timestamp.toLocaleTimeString()}
+                    {isClient ? message.timestamp.toLocaleTimeString() : '--:--:--'}
                   </p>
                 </div>
               </div>
