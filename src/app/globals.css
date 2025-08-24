@@ -2,7 +2,21 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a1a;
+  --datadog-purple: #632ca6;
+  --datadog-purple-dark: #5b2b94;
+  --datadog-purple-light: #8b4fbf;
+  --datadog-blue: #0080ff;
+  --datadog-green: #00c851;
+  --datadog-orange: #ff8c00;
+  --datadog-red: #ff4444;
+  --datadog-yellow: #ffbb33;
+  --datadog-gray-50: #f9f9f9;
+  --datadog-gray-100: #f5f5f5;
+  --datadog-gray-200: #e5e5e5;
+  --datadog-gray-300: #d4d4d4;
+  --datadog-gray-800: #262626;
+  --datadog-gray-900: #171717;
 }
 
 @theme inline {
@@ -10,11 +24,27 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Datadog brand colors */
+  --color-datadog-purple: var(--datadog-purple);
+  --color-datadog-purple-dark: var(--datadog-purple-dark);
+  --color-datadog-purple-light: var(--datadog-purple-light);
+  --color-datadog-blue: var(--datadog-blue);
+  --color-datadog-green: var(--datadog-green);
+  --color-datadog-orange: var(--datadog-orange);
+  --color-datadog-red: var(--datadog-red);
+  --color-datadog-yellow: var(--datadog-yellow);
+  --color-datadog-gray-50: var(--datadog-gray-50);
+  --color-datadog-gray-100: var(--datadog-gray-100);
+  --color-datadog-gray-200: var(--datadog-gray-200);
+  --color-datadog-gray-300: var(--datadog-gray-300);
+  --color-datadog-gray-800: var(--datadog-gray-800);
+  --color-datadog-gray-900: var(--datadog-gray-900);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0f0f23;
     --foreground: #ededed;
   }
 }

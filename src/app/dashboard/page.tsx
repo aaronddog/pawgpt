@@ -1,6 +1,6 @@
 'use client';
 
-import ChatInterface from '../components/ChatInterface';
+import ChatInterface from '../../components/ChatInterface';
 import { 
   ChatBubbleLeftRightIcon, 
   ClockIcon, 
@@ -44,7 +44,7 @@ const conversationStarters = [
   "How much exercise does a golden retriever need?",
 ];
 
-export default function Home() {
+export default function Dashboard() {
   return (
     <div className="min-h-screen bg-datadog-gray-50 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -114,29 +114,9 @@ export default function Home() {
                 Dogs can understand over 150 words and can even count to four or five! They're also capable of 
                 learning and remembering the names of hundreds of different objects and toys.
               </p>
-              <div className="mt-4 text-xs text-white">
+              <div className="mt-4 text-xs opacity-90">
                 💡 This changes every day - chat with PawGPT to learn more amazing dog facts!
               </div>
-            </div>
-
-            {/* Datadog Error Testing */}
-            <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-dashed border-datadog-orange">
-              <h3 className="text-lg font-semibold text-datadog-gray-900 mb-3">🔧 System Diagnostics</h3>
-              <p className="text-sm text-datadog-gray-600 mb-4">
-                Test the error tracking system to ensure proper monitoring is working.
-              </p>
-              <button
-                type="button"
-                className="w-full bg-datadog-red hover:bg-datadog-red-dark text-white font-semibold py-3 px-4 rounded-lg transition-colors"
-                onClick={() => {
-                  throw new Error("Datadog Setup Verification Test Error");
-                }}
-              >
-                🐕 Unleash the Dog (Test Error)
-              </button>
-              <p className="text-xs text-datadog-gray-500 mt-2">
-                Click to trigger a test error for monitoring verification.
-              </p>
             </div>
           </div>
         </div>
