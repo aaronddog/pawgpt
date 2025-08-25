@@ -100,7 +100,7 @@ export default function Home() {
                     }}
                   >
                     <span className="text-datadog-gray-700 group-hover:text-datadog-purple">
-                      "{starter}"
+                      &ldquo;{starter}&rdquo;
                     </span>
                   </button>
                 ))}
@@ -111,7 +111,7 @@ export default function Home() {
             <div className="bg-gradient-to-br from-datadog-purple-light to-datadog-purple text-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold mb-3">🐾 Did You Know?</h3>
               <p className="text-sm leading-relaxed">
-                Dogs can understand over 150 words and can even count to four or five! They're also capable of 
+                Dogs can understand over 150 words and can even count to four or five! They&apos;re also capable of 
                 learning and remembering the names of hundreds of different objects and toys.
               </p>
               <div className="mt-4 text-xs text-white">
