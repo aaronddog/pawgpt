@@ -4,44 +4,44 @@ import ChatInterface from '../components/ChatInterface';
 import { 
   ChatBubbleLeftRightIcon, 
   ClockIcon, 
-  SparklesIcon,
-  HeartIcon
+  ScaleIcon,
+  DocumentTextIcon
 } from '@heroicons/react/24/outline';
 
 const quickTips = [
   {
-    icon: HeartIcon,
-    title: "Puppy Training",
-    tip: "Start training early! Puppies learn best between 3-6 months old. Keep sessions short and fun!",
-    color: "text-datadog-red"
+    icon: ScaleIcon,
+    title: "Legal Documentation",
+    tip: "Always keep detailed records of important legal documents, contracts, and correspondence. Documentation is crucial for legal proceedings.",
+    color: "text-datadog-blue"
   },
   {
-    icon: SparklesIcon,
-    title: "Positive Reinforcement",
-    tip: "Reward good behavior immediately with treats, praise, or play. Never punish - redirect instead!",
+    icon: DocumentTextIcon,
+    title: "Contract Review",
+    tip: "Never sign a contract without thoroughly reading and understanding all terms. When in doubt, seek professional legal counsel.",
     color: "text-datadog-green"
   },
   {
     icon: ClockIcon,
-    title: "Exercise Timing",
-    tip: "Most dogs need 30min-2hrs daily exercise. Mental stimulation is just as important as physical!",
+    title: "Statute of Limitations",
+    tip: "Be aware of time limits for legal actions. Missing deadlines can permanently bar your ability to pursue legal remedies.",
     color: "text-datadog-orange"
   },
   {
     icon: ChatBubbleLeftRightIcon,
-    title: "Communication",
-    tip: "Dogs communicate through body language, vocalizations, and energy. Learn to read the signs!",
-    color: "text-datadog-blue"
+    title: "Legal Consultation",
+    tip: "For complex legal matters, always consult with a qualified attorney. Early legal advice can prevent costly mistakes.",
+    color: "text-datadog-red"
   }
 ];
 
 const conversationStarters = [
-  "How do I stop my dog from pulling on walks?",
-  "What's the best food for a senior dog?",
-  "Why does my puppy bite everything?",
-  "How can I help my anxious dog during thunderstorms?",
-  "What vaccines does my dog need?",
-  "How much exercise does a golden retriever need?",
+  "What should I include in a rental lease agreement?",
+  "How do I handle a workplace discrimination issue?",
+  "What are my rights if I'm injured in an accident?",
+  "How do I protect my intellectual property?",
+  "What should I know about estate planning?",
+  "How do I resolve a contract dispute?",
 ];
 
 export default function Home() {
@@ -49,9 +49,9 @@ export default function Home() {
     <div className="min-h-screen bg-datadog-gray-50 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-datadog-gray-900">🐕 PawGPT Chat</h1>
+          <h1 className="text-3xl font-bold text-datadog-gray-900">⚖️ LegalGPT Assistant</h1>
           <p className="mt-2 text-datadog-gray-600">
-            Chat with your AI dog expert! Get instant answers to all your dog-related questions.
+            Get preliminary legal guidance from our AI legal assistant. Receive informational responses to your legal questions and understand your rights.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export default function Home() {
           <div className="space-y-6">
             {/* Quick Tips */}
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-datadog-gray-900 mb-4">🎾 Quick Dog Tips</h3>
+              <h3 className="text-lg font-semibold text-datadog-gray-900 mb-4">📚 Legal Guidelines</h3>
               <div className="space-y-4">
                 {quickTips.map((tip, index) => {
                   const Icon = tip.icon;
@@ -88,7 +88,7 @@ export default function Home() {
 
             {/* Conversation Starters */}
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-datadog-gray-900 mb-4">💡 Ask Me About...</h3>
+              <h3 className="text-lg font-semibold text-datadog-gray-900 mb-4">💬 Common Legal Questions</h3>
               <div className="space-y-2">
                 {conversationStarters.map((starter, index) => (
                   <button
@@ -107,15 +107,15 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Dog Facts */}
+            {/* Legal Disclaimer */}
             <div className="bg-gradient-to-br from-datadog-purple-light to-datadog-purple text-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold mb-3">🐾 Did You Know?</h3>
+              <h3 className="text-lg font-semibold mb-3">⚠️ Important Disclaimer</h3>
               <p className="text-sm leading-relaxed">
-                Dogs can understand over 150 words and can even count to four or five! They&apos;re also capable of 
-                learning and remembering the names of hundreds of different objects and toys.
+                This AI assistant provides general legal information only and does not constitute legal advice. 
+                The information provided should not be relied upon as a substitute for professional legal counsel.
               </p>
               <div className="mt-4 text-xs text-white">
-                💡 This changes every day - chat with PawGPT to learn more amazing dog facts!
+                📞 For specific legal matters, always consult with a qualified attorney in your jurisdiction.
               </div>
             </div>
           </div>

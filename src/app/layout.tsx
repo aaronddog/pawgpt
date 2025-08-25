@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PawGPT - AI Dog Assistant",
-  description: "The world's first AI assistant designed by dogs, for dogs! Get expert advice on training, behavior, health, and everything pup-related from our tail-waggingly smart AI.",
-  keywords: ["dog AI", "pet care", "dog training", "puppy advice", "dog health", "pet assistant", "PawGPT"],
-  authors: [{ name: "PawGPT Team" }],
+  title: "LegalGPT - AI Legal Assistant",
+  description: "Get preliminary legal guidance and information from our AI legal assistant. Understand your rights, get answers to legal questions, and receive general legal information on contracts, employment law, personal injury, and more.",
+  keywords: ["legal AI", "legal advice", "legal information", "contract law", "employment law", "personal injury", "legal assistant", "LegalGPT"],
+  authors: [{ name: "LegalGPT Team" }],
   viewport: "width=device-width, initial-scale=1",
 };
 

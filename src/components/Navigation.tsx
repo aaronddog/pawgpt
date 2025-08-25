@@ -21,13 +21,13 @@ export default function Navigation() {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              {/* PawGPT Logo */}
+              {/* LegalGPT Logo */}
               <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
                 <div className="w-8 h-8 bg-datadog-purple rounded flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">🐕</span>
+                  <span className="text-white font-bold text-sm">⚖️</span>
                 </div>
                 <span className="text-xl font-bold text-datadog-gray-900">
-                  PawGPT
+                  LegalGPT
                 </span>
               </Link>
             </div>
@@ -51,9 +51,9 @@ export default function Navigation() {
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
             <div className="flex items-center space-x-4">
-              <span className="text-sm text-datadog-gray-600">Ready to chat, Human! 🐾</span>
+              <span className="text-sm text-datadog-gray-600">Legal guidance at your service 📋</span>
               <div className="w-8 h-8 bg-datadog-purple rounded-full flex items-center justify-center">
-                <span className="text-white font-semibold text-sm">🧑</span>
+                <span className="text-white font-semibold text-sm">👤</span>
               </div>
             </div>
           </div>

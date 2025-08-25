@@ -3,14 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #1a1a1a;
-  --datadog-purple: #632ca6;
-  --datadog-purple-dark: #5b2b94;
-  --datadog-purple-light: #8b4fbf;
-  --datadog-blue: #0080ff;
-  --datadog-green: #00c851;
-  --datadog-orange: #ff8c00;
-  --datadog-red: #ff4444;
-  --datadog-yellow: #ffbb33;
+  --datadog-purple: #1e3a8a;
+  --datadog-purple-dark: #1e40af;
+  --datadog-purple-light: #3b82f6;
+  --datadog-blue: #2563eb;
+  --datadog-green: #059669;
+  --datadog-orange: #d97706;
+  --datadog-red: #dc2626;
+  --datadog-yellow: #f59e0b;
   --datadog-gray-50: #f9f9f9;
   --datadog-gray-100: #f5f5f5;
   --datadog-gray-200: #e5e5e5;
